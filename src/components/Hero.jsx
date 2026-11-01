@@ -86,7 +86,7 @@ function MobileHero() {
 
 export default function Hero() {
   return (
-    <section id="home" aria-label="Home" className="relative lg:-mt-[5.4vw]">
+    <section id="home" aria-label="Home" className="relative lg:-mt-[4.2vw]">
       <DesktopHero />
       <MobileHero />
     </section>
