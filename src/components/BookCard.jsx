@@ -3,15 +3,15 @@ export default function BookCard({ book, onRead }) {
   const btn = 'inline-flex min-h-12 flex-1 items-center justify-center rounded-full px-4 text-base font-medium'
   return (
     <article className="flex w-full flex-col overflow-hidden rounded-xl border border-[#d9b867]/70 bg-[#fffdf6]">
-      {/* placeholder cover: replace with a real cover image later */}
-      <div className="grid aspect-[16/10] place-items-center bg-gradient-to-br from-[#c2570c] to-[#6b2d0a] p-3">
-        <div className="grid h-full w-full place-items-center border border-[#e9cf86] p-3 text-center text-[#fbe9b8]">
-          <div>
-            <p aria-hidden="true" className="font-head text-4xl">ॐ</p>
-            <h3 className="font-head mt-2 text-xl leading-snug">{book.title}</h3>
-            {book.description && <p className="mt-1 text-sm text-[#f3d98f]">{book.description}</p>}
-          </div>
-        </div>
+      <img
+        src={book.cover}
+        alt={`Cover of ${book.title}`}
+        loading="lazy"
+        className="aspect-[4/3] w-full bg-[#f1dfb5] object-cover"
+      />
+      <div className="px-4 pt-4 text-center">
+        <h3 className="font-head text-xl leading-snug text-[#6b2d0a]">{book.title}</h3>
+        {book.description && <p className="font-latin mt-0.5 text-lg font-medium text-[#8a5a2b]">{book.description}</p>}
       </div>
       <div className="mt-auto flex flex-col gap-2 p-4 sm:flex-row">
         {ready ? (<>
