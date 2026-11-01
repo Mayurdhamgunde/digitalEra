@@ -23,7 +23,7 @@ export default function Navbar() {
   const solid = scrolled || open
   return (
     <header className={`sticky top-0 z-40 transition-colors duration-300 lg:h-[5.4vw] ${solid ? 'border-b border-[#d9b867]/60 bg-[#f8ecd0]/95 backdrop-blur' : 'border-b border-transparent bg-[#f8ecd0] lg:bg-transparent'}`}>
-      <nav aria-label="Main" className="mx-auto flex items-center justify-between px-4 py-2 lg:h-full lg:py-0 lg:pl-[6.4vw] lg:pr-[6.8vw]">
+      <nav aria-label="Main" className="mx-auto flex w-full items-center justify-between px-4 py-2 lg:h-full lg:py-0 lg:pl-[6.4vw] lg:pr-[6.8vw]">
         <a href="#home" className="font-head flex items-center gap-2 leading-tight text-[#5a1f08] lg:gap-[.8vw]">
           <img src="/images/logo-book.png" alt="" width="84" height="52" className="h-8 w-auto lg:h-[3.1vw]" />
           <span className="text-lg font-semibold sm:text-xl lg:text-[2.14vw] lg:font-bold">{author.marathi}</span>

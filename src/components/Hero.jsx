@@ -15,7 +15,7 @@ const ExploreButton = ({ className = '', style }) => (
   <a
     href="#books"
     style={style}
-    className={`inline-flex items-center justify-center gap-[.6em] rounded-full border-[3px] border-[#e2b94f] bg-gradient-to-b from-[#d4661a] via-[#bd530f] to-[#98400a] font-latin font-semibold text-[#fff3df] shadow-[0_0_0_1px_#a8741f,0_6px_16px_rgba(140,60,8,.45),inset_0_2px_3px_rgba(255,214,150,.55)] transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c2570c] ${className}`}
+    className={`inline-flex items-center justify-center gap-[.5em] rounded-full border-2 border-[#e2b94f] bg-gradient-to-b from-[#d4661a] via-[#bd530f] to-[#98400a] font-latin font-semibold text-[#fff3df] shadow-[0_0_0_1px_#a8741f,0_5px_14px_rgba(140,60,8,.4),inset_0_2px_3px_rgba(255,214,150,.55)] transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c2570c] ${className}`}
   >
     <BookIcon />
     Explore Books
@@ -28,7 +28,13 @@ function DesktopHero() {
   return (
     <div
       className="relative hidden w-full overflow-hidden bg-[#f6e6c6] lg:block"
-      style={{ aspectRatio: '1672 / 941', containerType: 'inline-size', backgroundImage: "url('/images/hero-plate.jpg')", backgroundSize: '100% 100%' }}
+      style={{
+        height: '100vh',
+        minHeight: '100vh',
+        containerType: 'inline-size',
+        backgroundImage: "url('/images/hero-plate.jpg')",
+        backgroundSize: '100% 100%',
+      }}
     >
       <p className="font-head absolute -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-semibold leading-none text-[#c2570c]" style={{ ...at(538, 187), fontSize: '2.9cqw' }}>
         ॥ श्री ॥
@@ -42,7 +48,16 @@ function DesktopHero() {
       <p className="font-latin absolute -translate-x-1/2 whitespace-nowrap text-center font-semibold text-[#4a2814]" style={{ ...at(561, 460), fontSize: '1.74cqw', lineHeight: '2.04cqw' }}>
         {PARA_1}<br />{PARA_2}<br />{PARA_3}<br />{PARA_4}
       </p>
-      <ExploreButton className="absolute" style={{ ...at(385, 630), width: `${(377 / 1672) * 100}%`, height: `${(84 / 941) * 100}%`, fontSize: '2.2cqw' }} />
+      <ExploreButton
+        className="absolute -translate-x-1/2"
+        style={{
+          left: `${(555 / 1672) * 100}%`,
+          top: `${(662 / 941) * 100}%`,
+          width: `${(320 / 1672) * 100}%`,
+          height: `${(68 / 941) * 100}%`,
+          fontSize: '1.85cqw',
+        }}
+      />
     </div>
   )
 }
